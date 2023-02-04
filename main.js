@@ -1,37 +1,28 @@
-
-
 let c = document.getElementById("button");
-c.addEventListener("click",onClick)
+c.addEventListener("click",onClick);
+let p = document.getElementById("div1");
 
 function onClick (){
-    let d = 10;
-    let f = Math.round(d);
-    let e = 2.4;
-    let g = Math.round(e);
-    console.log(d)
-    console.log(f)
-    console.log(e)
-    console.log(g)
-    if (d != (Math.round(d))) {
-        console.log(true)
-    }
-    else{
-        console.log(false)
-    }
-
-    if (e != (Math.round(e))) {
-        console.log(true)
-    }
-    else{
-        console.log(false)
-    }
-    
-}
-let a = document.getElementById("input");
+    let lista2 = [];
+    let a = document.getElementById("input");
     let b = +(a.value);
     for (let i = 1; i <= b; i++) {
+        let lista = [];
         for (let j = 1; j <= i; j++) { 
-            console.log(i/j);
+            let o = i/j;
+            if (o === (Math.round(o))) {
+                lista.push(o);
+            }
         }
-        console.log("----")
-    }
+        console.log(lista);
+        console.log(lista.length);
+        if (lista.length === 2) {
+            lista2.push(i);
+        }
+        console.log("----");
+        p.innerHTML = lista2;
+        console.log(lista2);
+    }   
+}
+
+    
